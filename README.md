@@ -22,6 +22,4 @@ At the moment I am the only contribuer, you can reach me via github messaging or
 
 This is a simple project and one that's completely open to improvement or changes by others. 
 
-I made it to be useful on a business level and as a free tool to make developer and development team lives easier. As such I'm releasing it under a MIT License so you can use it for personal or for business use without restriction.
-
-https://opensource.org/licenses/MIT
+I made it to be useful on a business level and as a free tool to make developer and development team lives easier. As such I'm releasing it under a MIT License so you can use it for personal or for business use without restriction. It can be found in the LICENSE file in this repository or a copy is available at https://opensource.org/licenses/MIT
