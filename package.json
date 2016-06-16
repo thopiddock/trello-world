@@ -12,7 +12,9 @@
         "bootstrap": "4.0.0-alpha.2",
         "jquery": "2.1.0",
         "tether": "1.3.2",
-        "bootstrap-confirm-button": "0.1.0"
+        "bootstrap-confirm-button": "0.1.0",
+        "connect": "*",
+        "serve-static": "*"
     },
     "repository": {
         "type": "git",
