@@ -580,14 +580,32 @@ script.onload = function() {
     });
 }
 
-if (trelloWorldConfig.key === "exampleKey" ||
-    trelloWorldConfig.token === "exampleToken") {
-    var warning = document.createElement('div');
-    warning.innerText = "You need to set your Key and/or Token in trello-world-config.js!"
-    warning.className = "text-danger"
-    document.body.appendChild(warning);
-    $("#loading").hide();
-} else {
-    script.src = "https://trello.com/1/client.js?key=" + trelloWorldConfig.key + "&token=" + trelloWorldConfig.token;
-    document.body.appendChild(script);
-}
+$.ajax({
+    url: 'trello-world-config.dev.js',
+    type: 'HEAD',
+    error: function() {
+        if (trelloWorldConfig.key === "" ||
+            trelloWorldConfig.token === "") {
+            var warning = document.createElement('div');
+            warning.innerText = "The Key and Token have not been set and we couldn't find a developer configuration. You need to set your Key and/or Token in trello-world-config.js!"
+            warning.className = "text-danger"
+            document.body.appendChild(warning);
+            $("#loading").hide();
+        } else {
+            script.src = "https://trello.com/1/client.js?key=" + trelloWorldConfig.key + "&token=" + trelloWorldConfig.token;
+            document.body.appendChild(script);
+        }
+    },
+    success: function() {
+        //file exists
+        var devscript = document.createElement('script');
+        devscript.src = "trello-world-config.dev.js";
+        devscript.onload = function() {
+            console.debug("Key:   " + trelloWorldConfig.key);
+            console.debug("Token: " + trelloWorldConfig.token);
+            script.src = "https://trello.com/1/client.js?key=" + trelloWorldConfig.key + "&token=" + trelloWorldConfig.token;
+            document.body.appendChild(script);
+        };
+        document.body.appendChild(devscript);
+    }
+});

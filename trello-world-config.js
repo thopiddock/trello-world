@@ -1,4 +1,4 @@
 var trelloWorldConfig = {
-  key: "exampleKey", 
-  token: "exampleToken"
+  key: "", 
+  token: ""
 }
