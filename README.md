@@ -10,9 +10,9 @@ I created this as we use Webhooks in Trello to synchronise our created cards wit
 
 Simply fork the repository to your local development machine and either run the Launch configuration through node.js or add it to your own web server such as IIS or Apache.
 
-## Tests
+## Needed improvements
 
-Describe and show how to run the tests with code examples.
+Currently the UI lets you select a List from those available to create a new Webhook when actions occur in that List. This functionallity needs to be expanded to cover the other types, Cards, Boards, etc.
 
 ## Contributors
 
