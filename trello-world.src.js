@@ -580,6 +580,7 @@ script.onload = function() {
     });
 }
 
+// Override with trello-world-config.dev.js so developers can use a config file that isn't committed to version control.
 $.ajax({
     url: 'trello-world-config.dev.js',
     type: 'HEAD',
@@ -587,7 +588,7 @@ $.ajax({
         if (trelloWorldConfig.key === "" ||
             trelloWorldConfig.token === "") {
             var warning = document.createElement('div');
-            warning.innerText = "The Key and Token have not been set and we couldn't find a developer configuration. You need to set your Key and/or Token in trello-world-config.js!"
+            warning.innerText = "The Key or Token has not been set and we couldn't find a developer configuration. You need to set your Key and Token in trello-world-config.js!"
             warning.className = "text-danger"
             document.body.appendChild(warning);
             $("#loading").hide();
