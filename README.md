@@ -1,4 +1,6 @@
-## Trello World
+# Trello World
+
+[![Github Releases (by Release)](https://img.shields.io/github/downloads/atom/atom/v0.190.0/total.svg?maxAge=2592000)](https://github.com/thopiddock/trello-world/archive/v1.0.zip) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)]() [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000)](http://twitter.com/frametrapped)
 
 This project is a an effort to provide a small but friendly user interface for adding, editing and removing Webhooks in Trello. It uses npm to install dependencies so run `npm install` to fetch the dependencies.
 
